@@ -1,0 +1,125 @@
+INTERFACES
+
+An interface lets us treat an instance of a single class an many different types
+
+We saw that an abstract class requires its subclasses to implement its abstract methods
+
+An interface is similar to an abstract class although it is not a class
+
+Its a special type that is more like a contract between the class and client code, that
+the compiler enforces
+
+By declaring its using an interface, your class must implement all the abstract
+methods on the interface
+
+Aclass agrees to this, because it wants to be known by that type, by the outside world
+or the client code
+
+An interface lets classes that might have little else in common, be recognized as a
+special reference type
+
+declaring : public interface IFlightEnabled {}
+
+implenmtation: public class Bird implements IFlightEnabled
+
+
+A class can only extend a single class, which is why java called single inhereitance
+
+***BUT, a class can implement many interfaces. This gives us plug and play functionality
+which is what makes them so powerful***
+
+
+//WE dont have to declare the interface type abstract,
+// because this modifier is implicityl declared for all interfaces
+// Likewise, we dont have to declare any method abstract
+// In fact, any method declared without a body, is really implicitly declared
+// both public and abstract
+
+// if we dont write acces modifier on a class member, it's implicity package private
+// If we omit an acces modifier on an interface member, it is implicitly public
+
+Changing the acces modifier of a method to protected, on an interface, is a compiler error
+whether the method concrete or abstract
+
+Only a concrete method can have private acces
+
+We can see that we can describe birds in many ways, treating it as a
+member of multiple and quite different types
+
+remember that on uml diagram abstraction is shown with dashed lines and empty arrow
+
+In interfaces it turns out any field declared on interface are not instance fields
+they are implicitly public static and final which means they are really constants
+
+* The final modifier in Java
+when we use the final modifier, we prevent any further modifications to that component
+
+a final method means it can't be overriden by a subclass
+
+a final field means an object's field cannot be reassigned or given a different value,
+after its initialization
+
+a final static field is a class field that cant be reassigned or given a different value
+after the class's initialization process
+
+a final class cannot be overriden meaning that no class can use it in the extends clause
+
+a final variable in a block of code, means that once it's assigned a value
+any remaining code in the block cannot change it
+
+a final method parameter means we cannot assign a different value to that parameter in
+the method code block
+
+the final static field, is what you are really creating when you declare a field on an interface
+
+A constant in java is a variable that cannot be changed
+
+a constant variable is a final variable of primitive type, or type String that
+is initialized with constant expression
+
+constants in java written all UPPERCASE_LETTERS
+
+a static constant means we access it via the type name
+
+we saw this with the INTEGER.MAX_VALUE
+
+interface never gets instantiated and wont have a subclass that gets instantiated either
+
+there is no such thing as instance fields on interface because of this
+
+You might ask is not a Bird an instance of FlightEnabled(INTERFACE)?
+no. bird is an instance of a class that implements flightenabled's methods
+bird does not inherit traits from flightenabled, it just agrees to behave a certain way
+
+interfaces can be extended using extends keywords
+
+unlike a class interface can use extends keyword with multiple interfaces
+
+an interface does not implement another interface
+
+both interfaces and abstract classes are abstracted reference types
+
+reference types can be used in code as variable types, method parameters, return
+types list types so on
+
+when you use an abstracted reference type, this is referred to as coding to an interface
+
+this means u use more generelized types usually an interface type
+
+this technique is preferred cause it allows many runtime instances of various classes
+to be processed uniformly by the same code
+
+it also allows for substitutions of some other class or object, that still implements the same interface
+without forcing a major refactor of your code
+
+using interface types as the reference type is considered a BEST PRACTICE
+for ex
+        // we declared arraylist for variable fliers, if wanna change it later to LinkedList it will cause problems
+        // we are gonna need to change the methods too!
+        // if we use List interface declaration, later we can change arralist to linkedlist etc.
+
+what happens 40 classes using your interface and you wanna add an abstract method into interface?
+40 classes wont compile when we add extra method
+our code wont be backward compatible with this issu
+but java has several changes to interface lets look
+

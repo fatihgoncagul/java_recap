@@ -1,0 +1,8 @@
+Enumeration
+the enum type is java's type to support something called enumeration
+a complete ordered listing of all the items in a collection
+a special data type that contains predefined constants
+a constant is a variable whose value can't be changed, once it's value has been assigned
+*so an enum is a little like an array, except its elements are known, not changeable
+and each element can be referred by a constant name, instead of an index position
+

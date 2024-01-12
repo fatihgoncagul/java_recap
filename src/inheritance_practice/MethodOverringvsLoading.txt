@@ -1,0 +1,12 @@
+Method overloading means providing two or more seperate methods, in a class,
+with the same name, but different parameters
+Method return type may or may not be different, and that allows us to reuse the same method name
+Overloading reduces duplicated code and we don't have to remember multiple method names
+compiler is determining the right method to call on argument list
+---------
+Method overriding means defining a method in a child class, that already exists in the
+parent class, with the same signature (the same name,same arguments)
+We cannot override static methods, only instance methods can be overridden
+a rule would be: it cannot have a lower acces modifier. it cant have more restrictive access
+final or private methods cannot be overridden
+subclass can use super.METHODNAME() to call the superclass version of an overridden method
