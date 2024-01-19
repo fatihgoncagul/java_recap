@@ -20,6 +20,11 @@ enum FlightStages implements Trackable {
             System.out.println("Monitoring "+ this);
         }
     }
+
+    public FlightStages getNextStage(){
+        FlightStages[] allStages = values();
+        return allStages[(ordinal()+1)%allStages.length];
+    }
 }
 
 record DragonFly(String name,String type) implements FlightEnabled{
@@ -75,6 +80,15 @@ interface FlightEnabled{
     public  abstract void takeOff();
     abstract void land();
     void fly();
+
+    default     FlightStages transition(FlightStages stage){
+//        System.out.println("transition not implemented on "+
+//                getClass().getName());
+        FlightStages nextStage = stage.getNextStage();
+        System.out.println("transitioning from "+stage + " to " + nextStage );
+        return nextStage;
+
+    }
 
 
 }
@@ -141,7 +155,13 @@ class Jet implements FlightEnabled,Trackable{
         System.out.println(getClass().getSimpleName() + "'s coordinates recorded ");
     }
 
+    @Override
+    public FlightStages transition(FlightStages stage) {
+        System.out.println(getClass().getSimpleName() + " transitioning");
 
+
+        return FlightEnabled.super.transition(stage);
+    }
 }
 class Truck implements Trackable{
     @Override

@@ -1,0 +1,9 @@
+GENERICS
+
+Generics allows us to create classes, to design them, in a general way,
+without really worrying about how specific details of the elements they might contain
+
+ArrayLists are an example of a generic class
+
+We can use an ArrayList for any type of object, because many of them methods on that
+class can be applied to any type.

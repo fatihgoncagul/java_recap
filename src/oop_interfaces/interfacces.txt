@@ -123,3 +123,79 @@ what happens 40 classes using your interface and you wanna add an abstract metho
 our code wont be backward compatible with this issu
 but java has several changes to interface lets look
 
+the DEFAULT METHOD is a concrete method meaning it has a code block not abstract
+we can override this
+and this default method does not break any classes currently implementing the interface
+
+***differences between abstract class and interfaces***
+
+we cannot instantiate both of them.
+
+in abstract classes we can declare fields that are not static and final, instance fields in other words
+
+wih abstract classes we can use any of the four access modifiers for its concrete methods
+
+we can also use private for abstract methods of abstact classes
+
+an abstract class can extend only one parent class, but it can implement multiple
+interfaces
+
+when an abtract class is subclassed, the subclass usually provides implementations
+for all of the abstract methods in its parent class
+
+however if it doesnt then the subclass must also be declared abstract
+
+use an abstract class when..
+u expect classes that extend your abstract class to have many common methods or fields
+or require acces modifiers other than public
+u want to declare nonstatic or nonfinal fields so this enables u to define methods
+that can access and modify the state of an object (get,setName)
+YOU HAVE A REQUIREMENT for your base class, to provide a default implementation of
+certain methods, but other methods should be open to being overriden by child classes
+Summary: an æbstract class provides common d€fininition as a base class that multiple
+derived classes can share
+
+AN INTERFACE is just the declaration of methods which u want some classes
+to have its not the implementation
+
+In an interface, we define what kind of operation an object can perform. These
+operations defined by the classes that impelement the interface
+
+Interfaces form a contract between the class, and the outside world and this conttract
+is enforced at build time, by the java compiler
+
+u cannot instantiate interfaces but they may contain a mix of methods declared with
+or without implementation
+
+all methods on interfaces declared without a method body are automatically public and
+abstract
+
+an interface can extend another interface
+
+ınterfaces more flexible and can deal with a lot more stress on the design of your
+program cause they are not part of the class hierarchy
+
+BY INTRODUCING INTERFACES INTO YOUR PROGRAM YOU ARE REALLY INTRODUCING POINTS OF
+VARIATION AT WHICH YOU CAN PLUG IN DIFFERENT IMPLEMENTATIONS FOR THAT INTERFACE
+
+the interface decouples the "what" from the "how" and is used to make different types behave
+in similar ways
+
+The keyword default is used mostly for backwards compability
+
+since java 9 an interface can also contain private methods commonly used when
+default methods share common code
+
+Use an Interface when...
+you expect that unrelated classes will implement your interface. For example
+two of java's own interfaces, comparable and cloneable, can be implemented by many
+unrelated classes
+you want to specify the behavior part of particular data type, but you are not concerned
+about who implements its behavior
+you want to seperate different behavior
+
+records and enums can implement interface but cannot extend abstract class
+
+
+
+
