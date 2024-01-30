@@ -1,0 +1,15 @@
+Generics exist to enforce tighter type checks at compile time
+
+the compiler transforms a generic class into a typed class, meaning
+the byte code or class file contains no type parameters
+
+everywhere a type parameter is used in a class, it gets replaced with either type Object
+if no upper bound was specified, or the upper bound type itself
+
+this transformation process is called type erasure, because the T parameter
+is erased, or replaced with a true type
+
+why is this mportant
+
+Understanding how type erasure works for overloaded methods may be important
+

@@ -1,0 +1,11 @@
+ANONYMOUS CLASSES
+
+An anonymous class is a local class that does not have a name
+
+the anonymous class is never created with a class declaration but it is always
+instantiated as part of an expression
+
+after introduction of lambdas anonymous classes are used a lot less
+
+but they can be a good solution sometimes
+
