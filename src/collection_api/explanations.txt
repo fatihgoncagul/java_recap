@@ -1,0 +1,13 @@
+Collection API
+Collection interface
+
+(List, Queue, Set, implements Collection interface)
+Arraylist, Dequeue, HashSet
+LinkedList,       , LinkedHashSet
+
+we have another thing, called map, which has multiple implementation
+
+Collections classes
+
+the way we fetch and store the data is important
+

@@ -1,0 +1,33 @@
+LAMBDA EXPRESSIONS
+
+Lambdas expressions let you pass around snippets of custom code, giving you so much
+more functionality than you might otherwise be able to achieve and with very little effort
+
+A lambda expression can be thought of as implicit code for anonymous class, using a
+special kind of interface as the mechanics to do this
+
+lambdas are javas first step into functional programming
+
+functional programming : this is a programming paradigm that focuses on computing and returning results
+
+another feature of java, makes extensive use of lambddas, and that's streams
+
+streams are exciting because they create a pipeline of work that can be formed into a chain
+
+many of the stream operations take functional interfaces as parameters, meaning we can
+code them with lambdas
+
+FOUR BASIC CATEGORIES OF FUNCTIONAL INTERFACES
+
+consumer execute code without returning data
+function return a result of an operation or function
+bi function
+predicate boolean tests if a condition is true, if it is some operation will be performed
+bipredicate
+supplier T get() return an instance of something, like a factory method code
+BiConsumer  void accept(T t, U u) takes two arguments of two different types
+
+
+
+
+
