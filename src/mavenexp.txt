@@ -1,0 +1,30 @@
+project management tool
+when we are building and using the created application we get use of
+MAVEN in order to sync with the dependencies between spirng and hibernate for example
+if somerthing changes in hibernate, it might not support the spring version we are using
+we need to update that
+maven helps this issue
+maven helps us to get the dependencies
+maven also provides compiling, running, testing, packaging, deploying
+
+
+for every project, when we add dependencies to pom.xml
+we ask Maven to download those from internet
+it searches on our machine first, its in the C:\Users\<UserName>\.m2\repository
+if there is not
+it downloads from Maven Central and copies to our computer
+
+but theres a problem, do you think all the repositories are safe?
+so we need to make sure that we are using repositories that are safe
+in intellij it gives us information if its vulnerable
+also in mvn-repository also gives info
+
+in companies, theres company repository which is well tested on security
+maven would look local machine first  then looks company repo, if not there it wont go to the mavencentral
+but you can contact with the security team etc
+
+// important thing about database connection
+if we use postre then we might want to change it to mysql
+so we will change so many lines
+but dbms provide actual implementation that makes it easier
+5432 postresql port
